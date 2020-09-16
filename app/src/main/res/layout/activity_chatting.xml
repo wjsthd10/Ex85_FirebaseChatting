@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChattingActivity">
+
+<!--    <include layout="@layout/my_msgbox"/>-->
+<!--    <include layout="@layout/my_othermsgbox"/>-->
+
+    <ListView
+        android:transcriptMode="alwaysScroll"
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:divider="#ffffffff"
+        android:dividerHeight="0dp"/>
+
+    <LinearLayout
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="4dp">
+
+        <EditText
+            android:id="@+id/et_msg"
+            android:hint="input message"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:background="@drawable/bg_et_name"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_send"
+            android:text="send"
+            android:onClick="clickSend"
+            android:padding="10dp"
+            android:layout_marginLeft="8dp"
+            android:backgroundTint="#C8EDD190"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>
